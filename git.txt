@@ -1,2 +1,0 @@
-Aprendi Git e GitHub.
-GitHub é um site como repositório que armazena os nossos projetos e serviços como um Google Drive. Já o Git, seria um repositório dentro do sistema do computador, você pode criar um repositório criando uma pasta e abrindo dentro dela o terminal, depois disso, abra o terminal e coloque os códigos específicos para criar o repositório.
