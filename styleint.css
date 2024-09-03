@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    background: linear-gradient(90deg, rgb(2, 1, 8) 10%, rgb(11, 24, 29) 50%, rgb(0, 0, 7) 80%);
+}
+
+
+header {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 9%, #485052 46%, rgb(10, 10, 49) 81%);
+    color: #fff;
+    padding: 20px 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logo {
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item {
+    margin: 10px;
+    color: rgb(136, 1, 1);
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 1s;
+}
+
+.nav-link:hover {
+    color: #ddd;
+    box-shadow: 1px 1px 40px #036464;
+    transition: 0.6s;
+}
+
+.hamburguer {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburguer .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.introduction {
+    text-align: center;
+    height: 50vh;
+}
+
+.introduction h2 {
+    font-size: 40px;
+    color: #fff;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.introduction h3 {
+    color: #ddd;
+    margin: 40px 0 10px 0;
+    font-size: 23px;
+}
+
+.introduction p {
+    color: beige;
+}
+
+.next {
+    position: absolute;
+    right: 65%;
+    color: antiquewhite;
+}
+
+.more__about {
+    font-size: 20px;
+    color: #fff;
+}
+
+.next a {
+    font-weight: bold;
+    color: #036464;
+}
+
+@media (max-width: 768px) {
+    .hamburguer {
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 58px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: #000000;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+}

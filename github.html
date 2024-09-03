@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub - Guia Completo</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">GitHub</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="https://github.com/" class="nav-link">GitHub</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+            </ul>
+            <div class="hamburguer">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>GitHub</h1>
+        <section id="account">
+            <h2>Criando uma Conta e Configurando o GitHub</h2>
+            <h3> Como criar uma conta no GitHub?</h3>
+            <p>O primeiro a se fazer é entrar no site do GitHub clicando <a href="https://github.com">aqui</a>. Após
+                isso, você será redirecionado para o site do GitHub, e no canto superior direito terá duas opções: Sign
+                In (para quem já tem uma conta) e Sign Up (para cadastrar uma nova conta).</p>
+            <h3> Quais são os primeiros passos após a criação da conta no GitHub?</h3>
+            <ul>
+                <li>Configure seu perfil para que fique apresentável, existe um site com textos personalizados para usar
+                    no seu perfil: MarkdownBadges.</li>
+                <li>Preencha as informações de biografia e crie um README (Crie um arquivo com o nome README.MD).</li>
+            </ul>
+            <h3>5. Como configurar o Git no seu computador local para se conectar ao GitHub?</h3>
+            <p><strong>Passo 1:</strong> Instalar o Git. Se você ainda não tiver o Git instalado, baixe e instale a
+                versão apropriada para o seu sistema operacional a partir do site oficial do Git: <a
+                    href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.</p>
+            <p><strong>Passo 2:</strong> Configurar suas informações de usuário. Abra o terminal ou prompt de comando e
+                configure seu nome de usuário e endereço de e-mail com os seguintes comandos:</p>
+            <pre><code>git config --global user.name "Seu Nome"
+git config --global user.email "seu-email@example.com"</code></pre>
+        </section>
+
+        <section id="repositories">
+            <h2>Repositórios</h2>
+            <h3> O que é um repositório no GitHub?</h3>
+            <p>Um repositório no GitHub é um meio de armazenar projetos e dados seus em um lugar seguro.</p>
+            <h3> Como criar um novo repositório no GitHub?</h3>
+            <p>Vá para a página Home do GitHub e clique no botão "New repository". Dê um nome ao seu repositório e
+                selecione se será público ou privado.</p>
+            <h3> Qual é a diferença entre um repositório público e um repositório privado?</h3>
+            <p>Um repositório público pode ser visualizado e baixado por qualquer pessoa, enquanto um repositório
+                privado só pode ser acessado por você e por quem você autorizar.</p>
+        </section>
+
+
+        <section id="branches">
+            <h2>Branches e Merge</h2>
+            <h3> O que são branches e como criar uma nova branch no GitHub?</h3>
+            <p>Branches são ramificações que permitem que você divida seu trabalho em partes separadas. Para criar uma
+                nova branch, use:</p>
+            <pre><code>git checkout -b nome-da-branch</code></pre>
+            <p>No GitHub:</p>
+            <ul>
+                <li>Vá para a página do seu repositório.</li>
+                <li>Clique no menu suspenso de branches.</li>
+                <li>Digite o nome da nova branch e clique em "Create branch".</li>
+            </ul>
+            <h3> Como fazer merge de branches e quais são as boas práticas para isso?</h3>
+            <p>Para fazer merge, use:</p>
+            <pre><code>git checkout main git merge nome-da-branch</code></pre>
+            <p>No GitHub, vá para a página do pull request da branch e clique em "Merge pull request".</p>
+            <p><strong>Boas práticas:</strong></p>
+            <ul>
+                <li>Revise o código antes de fazer o merge.</li>
+                <li>Certifique-se de que todos os testes estão passando.</li>
+                <li>Resolva conflitos de merge.</li>
+                <li>Use rebase para manter um histórico limpo quando apropriado.</li>
+            </ul>
+        </section>
+
+        <section id="contributions">
+            <h2>Contribuições e Pull Requests</h2>
+            <h3>Como fazer um fork de um repositório?</h3>
+            <p>Um fork é uma cópia de um repositório que você pode modificar. Para fazer um fork:</p>
+            <ul>
+                <li>Vá para o repositório que deseja forkar.</li>
+                <li>Clique no botão "Fork".</li>
+                <li>Selecione sua conta pessoal ou uma organização para copiar o repositório.</li>
+            </ul>
+            <h3> O que é um pull request e como criar um pull request?</h3>
+            <p>Um pull request é uma solicitação para mesclar mudanças de uma branch em um repositório de destino. Para
+                criar um pull request:</p>
+            <ul>
+                <li>Faça push das mudanças para sua branch:</li>
+                <pre><code>git push origin nome-da-branch</code></pre>
+                <li>No GitHub, vá para a página do repositório e clique em "Compare & pull request".</li>
+                <li>Preencha o título e a descrição do pull request e clique em "Create pull request".</li>
+            </ul>
+            <h3> Como revisar e aceitar um pull request?</h3>
+            <p>Para revisar um pull request:</p>
+            <ul>
+                <li>Vá para a aba "Pull requests" no repositório.</li>
+                <li>Clique no pull request que deseja revisar.</li>
+                <li>Veja os arquivos alterados e adicione comentários, se necessário.</li>
+            </ul>
+            <p>Para aceitar um pull request:</p>
+            <ul>
+                <li>Se estiver satisfeito com as mudanças, clique em "Merge pull request".</li>
+                <li>Confirme o merge clicando em "Confirm merge".</li>
+            </ul>
+        </section>
+
+        <section id="issues">
+            <h2>Issues e Projetos</h2>
+            <h3>18. O que são issues e como abrir uma issue no GitHub?</h3>
+            <p>Issues são relatórios de bugs, solicitações de recursos ou outras tarefas. Para abrir uma issue:</p>
+            <ul>
+                <li>Vá para a aba "Issues" no repositório.</li>
+                <li>Clique em "New issue".</li>
+                <li>Preencha o título e a descrição da issue e clique em "Submit new issue".</li>
+            </ul>
+            <h3>19. Como usar o sistema de projetos do GitHub para gerenciar tarefas?</h3>
+            <p>Projetos no GitHub ajudam a organizar e priorizar o trabalho. Para criar um projeto:</p>
+            <ul>
+                <li>Vá para a aba "Projects" no repositório.</li>
+                <li>Clique em "New project".</li>
+                <li>Dê um nome e descrição ao projeto e adicione colunas como "To do", "In progress", "Done".</li>
+                <li>Adicione cartões para issues, pull requests ou notas.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GitHub. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
